@@ -23,8 +23,19 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
-npm start
 ```
+
+The app is a static export (`out/`). Local preview:
+
+```bash
+npx serve out
+```
+
+## Live site
+
+Hosted on GitHub Pages:
+
+https://abhinavbhushan096.github.io/abhinav-bhushan-portfolio/
 
 ## Updating content
 
@@ -55,8 +66,8 @@ The contact form uses `mailto:` (no backend). It opens the visitor's email clien
 
 ## Deploy
 
-Deploy to [Vercel](https://vercel.com) or any Node host that supports Next.js:
+Publish the static site to the `gh-pages` branch:
 
 ```bash
-npm run build
+npm run deploy:pages
 ```

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 import { navLinks, site } from "@/data/site";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Container } from "./Container";
 
@@ -64,7 +64,7 @@ export function Navbar() {
           </nav>
 
           <a
-            href={site.resumePath}
+            href={assetPath(site.resumePath)}
             download
             className="interactive focus-ring ml-1 hidden h-10 items-center gap-2 rounded-md border border-[var(--border-strong)] px-3 text-sm font-medium text-[var(--text)] hover:border-[var(--accent)] hover:bg-[var(--bg-muted)] active:scale-[0.98] sm:inline-flex"
           >
@@ -109,7 +109,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href={site.resumePath}
+            href={assetPath(site.resumePath)}
             download
             className="interactive focus-ring flex h-11 items-center gap-2 rounded-md px-3 text-sm font-medium text-[var(--text)] hover:bg-[var(--bg-muted)] sm:hidden"
             onClick={() => setOpen(false)}

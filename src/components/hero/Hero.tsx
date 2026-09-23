@@ -3,6 +3,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { site } from "@/data/site";
+import { assetPath } from "@/lib/utils";
 import { Container } from "@/components/layout/Container";
 
 const focus = ["Microsoft Azure", "AWS", "Disaster Recovery", "Networking", "Cost Optimization", "Automation"];
@@ -66,7 +67,7 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href={site.resumePath}
+              href={assetPath(site.resumePath)}
               download
               className="interactive focus-ring inline-flex h-12 items-center gap-2 rounded-lg border border-[var(--border-strong)] bg-[var(--bg-elevated)]/80 px-6 text-sm font-semibold text-[var(--text)] backdrop-blur hover:border-[var(--accent)] hover:bg-[var(--bg-muted)] active:scale-[0.98]"
             >
