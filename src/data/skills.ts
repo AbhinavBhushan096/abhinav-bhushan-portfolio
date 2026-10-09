@@ -7,14 +7,17 @@ export const azureSkills = [
   "Azure DNS",
   "Azure Cost Management",
   "Windows Server",
+  "Azure Monitor",
+  "Log Analytics",
+  "Azure Backup",
+  "Azure Site Recovery",
 ] as const;
 
 export const awsSkills = [
   "EC2",
   "CloudFormation",
-  "AWS networking fundamentals",
-  "Serverless concepts",
   "AWS Cost Explorer",
+  "CloudWatch",
 ] as const;
 
 export const devopsSkills = [
@@ -29,36 +32,9 @@ export const devopsSkills = [
   { name: "GitHub", note: "skill" as const },
   { name: "Linux", note: "skill" as const },
   { name: "Shell Scripting", note: "skill" as const },
+  { name: "Prometheus", note: "skill" as const },
+  { name: "Grafana", note: "skill" as const },
 ];
-
-export const networkingSkills = [
-  "TCP/IP",
-  "DNS",
-  "VPN",
-  "Site-to-Site VPN",
-  "NSG",
-  "Firewalls",
-  "Routing",
-  "Network Security",
-] as const;
-
-export const monitoringSkills = [
-  "Azure Monitor",
-  "Log Analytics",
-  "CloudWatch",
-  "Prometheus",
-  "Grafana",
-] as const;
-
-export const backupDrSkills = [
-  "Azure Backup",
-  "Azure Site Recovery",
-  "Recovery Services Vault",
-  "Replication",
-  "RTO",
-  "RPO",
-  "Active-Passive DR",
-] as const;
 
 export const fullstackSkills = {
   frontend: [

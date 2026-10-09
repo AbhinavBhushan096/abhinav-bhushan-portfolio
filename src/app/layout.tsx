@@ -1,22 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { site } from "@/data/site";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { ThemeScript } from "@/components/theme/ThemeScript";
+import { ThemeProvider, ThemeScript } from "@/components/theme-provider";
 import "./globals.css";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-ibm-plex-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: `${site.name} | ${site.title}`,
@@ -48,7 +33,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#020617" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
   ],
 };
@@ -59,16 +44,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      data-theme="dark"
-      suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
-    >
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--text)] antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased">
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

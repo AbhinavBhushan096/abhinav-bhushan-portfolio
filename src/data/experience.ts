@@ -30,7 +30,7 @@ export const experience = {
       start: "2025-11",
       end: "2026-04",
       summary:
-        "Hands-on cloud support — monitoring, troubleshooting, backup, and day-to-day infrastructure assistance.",
+        "Hands-on cloud support: monitoring, troubleshooting, backup, and day-to-day infrastructure assistance.",
       highlights: [
         "Worked with Azure VMs, Virtual Networks, VPN concepts, and Network Security Groups",
         "Supported disaster recovery and backup workflows with Azure Site Recovery",

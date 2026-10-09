@@ -12,5 +12,5 @@ export const about = {
     "Cloud Migration",
   ],
   education:
-    "B.Tech in Computer Science — IIIT Ranchi · Dec 2021 – May 2025 · Grade: 8.25/10",
+    "B.Tech in Computer Science, IIIT Ranchi · Dec 2021 – May 2025",
 };

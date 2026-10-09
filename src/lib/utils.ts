@@ -1,12 +1,12 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 
 /** Prefix public asset paths for GitHub Pages project URLs. */
 export function assetPath(path: string) {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+  return `${base}${path.startsWith("/") ? path : `/${path}`}`
 }
